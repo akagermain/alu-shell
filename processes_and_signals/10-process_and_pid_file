@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
-# Indefinitely writes "I am alive!" to /tmp/my_process every 2 seconds
+# Creates a PID file, handles SIGTERM, SIGINT, SIGQUIT signals and displays messages indefinitely
+echo $$ > /var/run/myscript.pid
+trap "echo 'I hate the kill command'; rm -f /var/run/myscript.pid; exit" SIGTERM
+trap "echo 'Y U no love me?!'" SIGINT
+trap "rm -f /var/run/myscript.pid; exit" SIGQUIT
 while true; do
-  echo "I am alive!" >> /tmp/my_process
-  sleep 2
+    echo "To infinity and beyond"
+    sleep 2
 done
