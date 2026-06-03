@@ -1,2 +1,7 @@
 #!/usr/bin/env bash
+# Displays the PID and process name of processes whose name contains bash
+pgrep -a bash
+EOFcat > 3-show_your_bash_pid_made_easy << 'EOF'
+#!/usr/bin/env bash
+# Displays the PID and process name of processes whose name contains bash
 pgrep -a bash

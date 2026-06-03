@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Displays "To infinity and beyond" indefinitely, prints "I am invincible!!!" when receiving SIGTERM
 trap "echo 'I am invincible!!!'" SIGTERM
 while true; do
     echo "To infinity and beyond"

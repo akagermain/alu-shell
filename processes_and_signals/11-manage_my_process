@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Init script that manages the manage_my_process script with start, stop, and restart commands
 case "$1" in
     start)
         ./manage_my_process &
